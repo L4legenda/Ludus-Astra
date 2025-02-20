@@ -1,0 +1,16 @@
+﻿services:
+#  todo_ludusastra:
+#    image: todo_ludusastra
+#    build:
+#      context: .
+#      dockerfile: ToDo_LudusAstra/Dockerfile
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"

@@ -1,0 +1,6 @@
+@ToDo_LudusAstra_HostAddress = http://localhost:5155
+
+GET {{ToDo_LudusAstra_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
