@@ -39,6 +39,16 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+// Добавление сервисов CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin() // Разрешить запросы от любого источника
+            .AllowAnyMethod() // Разрешить любые HTTP-методы (GET, POST, PUT и т.д.)
+            .AllowAnyHeader(); // Разрешить любые заголовки
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -54,7 +64,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+// Использование политики CORS
+app.UseCors("AllowAll");
+
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 // Подключаем аутентификацию и авторизацию
 app.UseAuthentication();

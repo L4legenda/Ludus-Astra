@@ -28,27 +28,62 @@ namespace ToDo_LudusAstra.Controllers
         
         // 1. Регистрация пользователя
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterRequest model)
+        public async Task<IActionResult> Register([FromForm] RegisterRequest model)
         {
             if (await _context.Users.AnyAsync(u => u.Email == model.Email))
             {
                 return BadRequest(new { message = "Email уже зарегистрирован" });
             }
 
+            string avatarUrl = null;
+
+            if (model.Avatar != null)
+            {
+                // Проверяем размер файла (не больше 5MB)
+                if (model.Avatar.Length > 5 * 1024 * 1024)
+                    return BadRequest(new { message = "Размер файла не должен превышать 5MB" });
+
+                // Проверяем расширение файла (разрешены только .jpg, .png)
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+                var fileExtension = Path.GetExtension(model.Avatar.FileName).ToLower();
+
+                if (!allowedExtensions.Contains(fileExtension))
+                    return BadRequest(new { message = "Разрешены только изображения формата .jpg, .png" });
+
+                // Создаём путь для сохранения файла
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/avatars");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // Генерируем уникальное имя файла
+                var uniqueFileName = $"{Guid.NewGuid()}{fileExtension}";
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // Сохраняем файл
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await model.Avatar.CopyToAsync(stream);
+                }
+
+                // URL для доступа к изображению
+                avatarUrl = $"/uploads/avatars/{uniqueFileName}";
+            }
+
             var user = new User
             {
                 FullName = model.FullName,
                 Email = model.Email,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password), // Хешируем пароль
-                ProfilePictureUrl = model.ProfilePictureUrl
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                ProfilePictureUrl = avatarUrl
             };
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Регистрация успешна" });
+            return Ok(new { message = "Регистрация успешна", userId = user.Id, avatarUrl });
         }
-        
         // 2. Авторизация и получение JWT-токена
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest model)
@@ -93,7 +128,7 @@ public class RegisterRequest
     public string FullName { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    public string ProfilePictureUrl { get; set; }
+    public IFormFile? Avatar { get; set; } // Фото профиля
 }
 
 // Модель запроса авторизации

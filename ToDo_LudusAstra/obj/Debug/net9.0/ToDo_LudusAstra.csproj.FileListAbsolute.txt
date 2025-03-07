@@ -249,3 +249,5 @@
 /Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/obj/Debug/net9.0/ToDo_LudusAstra.pdb
 /Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/obj/Debug/net9.0/ToDo_LudusAstra.genruntimeconfig.cache
 /Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/obj/Debug/net9.0/ref/ToDo_LudusAstra.dll
+/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/obj/Debug/net9.0/ToDo_LudusAstra.sourcelink.json
+/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/bin/Debug/net9.0/ToDo_LudusAstra.staticwebassets.runtime.json

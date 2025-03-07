@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToDo_LudusAstra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1be79fd9df586c2f19126ba7c5c80f26fa90a3d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToDo_LudusAstra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToDo_LudusAstra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
