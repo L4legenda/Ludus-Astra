@@ -5,80 +5,52 @@ namespace ToDo_LudusAstra.AIAgent;
 
 public class ChatGpt
 {
-    private const string API_KEY = "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"; // Ваш API ключ
+    private const string API_KEY = "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"; // Ваш API ключ
     private const string MODEL = "openai/chatgpt-4o-latest";
 
-    // Метод для обработки контента (удаление тегов <think>)
-    private static string ProcessContent(string content)
+    private readonly HttpClient _httpClient;
+    private readonly string _apiKey;
+
+    public ChatGpt()
     {
-        return content.Replace("<think>", "").Replace("</think>", "");
+        _httpClient = new HttpClient();
+        _apiKey = API_KEY;
     }
-
-    // Основной метод для отправки запроса и получения ответа в потоковом режиме
-    public async Task<string> ChatStreamAsync(string prompt)
+    
+    
+    public async Task<string> ChatStreamAsync(string userMessage)
     {
-        using (HttpClient client = new HttpClient())
+        var requestUri = "https://openrouter.ai/api/v1/chat/completions";
+
+        var requestBody = new
         {
-            // Устанавливаем заголовки
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", API_KEY);
-            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-            // Формируем тело запроса
-            var data = new
+            model = MODEL,
+            messages = new[]
             {
-                model = MODEL,
-                messages = new[] { new { role = "user", content = prompt } },
-                stream = true
-            };
-
-            var json = JsonSerializer.Serialize(data);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            // Отправляем запрос
-            using (var response = await client.PostAsync("https://openrouter.ai/api/v1/chat/completions", content))
-            {
-                if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                new
                 {
-                    throw new Exception("Ошибка API: " + response.StatusCode);
+                    role = "user",
+                    content = userMessage
                 }
-
-                var fullResponse = new List<string>();
-
-                // Читаем ответ построчно
-                using (var stream = await response.Content.ReadAsStreamAsync())
-                using (var reader = new System.IO.StreamReader(stream))
-                {
-                    while (!reader.EndOfStream)
-                    {
-                        var line = await reader.ReadLineAsync();
-                        if (!string.IsNullOrEmpty(line))
-                        {
-                            var chunkStr = line.Replace("data: ", "");
-                            try
-                            {
-                                var chunkJson = JsonSerializer.Deserialize<JsonElement>(chunkStr);
-                                if (chunkJson.TryGetProperty("choices", out var choices))
-                                {
-                                    var contentDelta = choices[0].GetProperty("delta").GetProperty("content").GetString();
-                                    if (!string.IsNullOrEmpty(contentDelta))
-                                    {
-                                        var cleaned = ProcessContent(contentDelta);
-                                        Console.Write(cleaned); // Выводим в консоль
-                                        fullResponse.Add(cleaned);
-                                    }
-                                }
-                            }
-                            catch
-                            {
-                                // Игнорируем ошибки парсинга
-                            }
-                        }
-                    }
-                }
-
-                Console.WriteLine(); // Перенос строки после завершения потока
-                return string.Join("", fullResponse); // Возвращаем полный ответ
             }
+        };
+        
+        var jsonContent = JsonSerializer.Serialize(requestBody);
+        var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+        _httpClient.DefaultRequestHeaders.Clear();
+        _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
+
+        var response = await _httpClient.PostAsync(requestUri, httpContent);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var responseContent = await response.Content.ReadAsStringAsync();
+            return responseContent;
+        }
+        else
+        {
+            throw new HttpRequestException($"Request failed with status code {response.StatusCode}");
         }
     }
 }
