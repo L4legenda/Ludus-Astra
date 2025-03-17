@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Text;
 using ToDo_LudusAstra.Data;
 using ToDo_LudusAstra.Services;
+using TaskStatus = ToDo_LudusAstra.Data.TaskStatus;
 
 namespace ToDo_LudusAstra.Controllers
 {
@@ -109,14 +110,31 @@ namespace ToDo_LudusAstra.Controllers
             var user = await _context.Users.FindAsync(userId);
 
             if (user == null) return NotFound(new { message = "Пользователь не найден" });
+            
+            var completedTasks = await _context.Tasks
+                .Where(t => t.TaskAssignments.Any(ta => ta.UserId == userId) && t.Status == TaskStatus.Completed)
+                .ToListAsync();
 
+            // Суммируем опыт из завершённых задач
+            int totalExp = completedTasks.Sum(t => t.exp);
+            
             return Ok(new
             {
                 id = user.Id,
                 fullName = user.FullName,
                 email = user.Email,
+                exp = totalExp,
                 profilePictureUrl = user.ProfilePictureUrl
             });
+        }
+        
+        // 4. Проверка авторизации
+        [Authorize]
+        [HttpGet("check")]
+        public async Task<IActionResult> check()
+        {
+
+            return Ok(new {});
         }
 
     }

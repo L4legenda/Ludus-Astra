@@ -6718,6 +6718,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.2",
       "Microsoft.IdentityModel.Tokens >= 8.5.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
+      "Newtonsoft.Json >= 13.0.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.3",
       "Scalar.AspNetCore >= 2.0.15",
       "System.IdentityModel.Tokens.Jwt >= 8.5.0"
@@ -6802,6 +6803,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",

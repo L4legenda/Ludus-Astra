@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fODrugehcV0ol6JMLcBGP/XdTstMSvdXREvrdT1s1uM=",
+  "Hash": "xYaWMJzfZpziX2F2Id1Ks2+vKb+yaVcawI4FtoBd+Us=",
   "Source": "ToDo_LudusAstra",
   "BasePath": "_content/ToDo_LudusAstra",
   "Mode": "Default",
@@ -101,6 +101,27 @@
       "OriginalItemSpec": "wwwroot/uploads/avatars/76618f0e-b0e9-4fb2-ad7e-29d7983f6058.jpg"
     },
     {
+      "Identity": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c.png",
+      "SourceId": "ToDo_LudusAstra",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/",
+      "BasePath": "_content/ToDo_LudusAstra",
+      "RelativePath": "uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4irepcqx2g",
+      "Integrity": "vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c.png"
+    },
+    {
       "Identity": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/b3982734-460a-4b25-802c-9bba497cc658.jpg",
       "SourceId": "ToDo_LudusAstra",
       "SourceType": "Discovered",
@@ -141,6 +162,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/avatars/db1135eb-e688-4131-8d07-717b89730b3f.jpg"
+    },
+    {
+      "Identity": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec.png",
+      "SourceId": "ToDo_LudusAstra",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/",
+      "BasePath": "_content/ToDo_LudusAstra",
+      "RelativePath": "uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4irepcqx2g",
+      "Integrity": "vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec.png"
+    },
+    {
+      "Identity": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5.png",
+      "SourceId": "ToDo_LudusAstra",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/",
+      "BasePath": "_content/ToDo_LudusAstra",
+      "RelativePath": "uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4irepcqx2g",
+      "Integrity": "vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5.png"
     }
   ],
   "Endpoints": [
@@ -473,6 +536,88 @@
       ]
     },
     {
+      "Route": "uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c.4irepcqx2g.png",
+      "AssetFile": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 07:49:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4irepcqx2g"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c.png",
+      "AssetFile": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/8646d47f-be9c-4f83-b397-fc360ee6ed5c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 07:49:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ="
+        }
+      ]
+    },
+    {
       "Route": "uploads/avatars/b3982734-460a-4b25-802c-9bba497cc658.93hpm7wd5c.jpg",
       "AssetFile": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/b3982734-460a-4b25-802c-9bba497cc658.jpg",
       "Selectors": [],
@@ -633,6 +778,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-N6wKw3kRZJjZLUPlpVqjuiZvBd85eapgRYwh75bvzYM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec.4irepcqx2g.png",
+      "AssetFile": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 07:50:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4irepcqx2g"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec.png",
+      "AssetFile": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/e22ba538-6977-4250-aa3f-08c7e2f8ebec.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 07:50:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5.4irepcqx2g.png",
+      "AssetFile": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 07:48:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4irepcqx2g"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5.png",
+      "AssetFile": "/Users/l4legenda/Projects/ToDo_LudusAstra/ToDo_LudusAstra/wwwroot/uploads/avatars/f0358729-da77-4563-9261-0f6a187caeb5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 07:48:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vMua9QmhriN0wHC0pSdEzH+EJRG/mB+5GhrF49hjfHQ="
         }
       ]
     }

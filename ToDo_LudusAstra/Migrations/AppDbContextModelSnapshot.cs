@@ -121,15 +121,25 @@ namespace ToDo_LudusAstra.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("Priority")
+                        .HasColumnType("integer");
+
                     b.Property<int>("ProjectId")
                         .HasColumnType("integer");
 
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 
+                    b.Property<string>("SubTasks")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("exp")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

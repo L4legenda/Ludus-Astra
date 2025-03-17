@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 namespace ToDo_LudusAstra.Data;
 
 public class Task
@@ -7,7 +9,11 @@ public class Task
     public string Description { get; set; }  // Описание задачи
     public DateTime Deadline { get; set; }  // Дата дедлайна
     public TaskStatus Status { get; set; } = TaskStatus.New;  // Статус задачи
+    public TaskPriority Priority { get; set; } = TaskPriority.Low;  // Приоритет задачи
+    public string SubTasks { get; set; } = "{}";
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+    public int exp { get; set; } = 0;
     
     // Связь с проектом
     public int ProjectId { get; set; }
@@ -24,12 +30,36 @@ public class Task
     public ICollection<TaskChecklistItem> Checklist { get; set; }
 }
 
+
+
 // Перечисление статусов задачи
 public enum TaskStatus
 {
-    New,        // Новая
-    InProgress, // В процессе
-    OnReview,   // На проверке
-    Completed,  // Завершена
-    Cancelled   // Отменена
+    [Description("Новая")]
+    New,
+    
+    [Description("В процессе")]
+    InProgress,
+    
+    [Description("На проверке")]
+    OnReview,
+    
+    [Description("Завершена")]
+    Completed,
+    
+    [Description("Отменена")]
+    Cancelled
+}
+
+// Перечисление приоритетов задачи
+public enum TaskPriority
+{
+    [Description("Высокий")]
+    High,
+    
+    [Description("Средний")]
+    Medium,
+    
+    [Description("Низкий")]
+    Low
 }
