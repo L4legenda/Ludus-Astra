@@ -67,7 +67,7 @@ if (app.Environment.IsDevelopment())
 // Использование политики CORS
 app.UseCors("AllowAll");
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
